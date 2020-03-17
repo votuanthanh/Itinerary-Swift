@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,9 +22,13 @@
                                 <rect key="frame" x="11" y="44" width="393" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hA-Hr-Njs">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="166"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFG-OM-q9B">
-                                        <rect key="frame" x="8" y="8" width="377" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="8" y="8" width="174" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -51,15 +56,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hR-aF-cok">
+                                        <rect key="frame" x="353" y="8" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="va4-oU-jdb" eventType="touchUpInside" id="6ea-89-ryj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40175513698630139" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="Tint"/>
                         <viewLayoutGuide key="safeArea" id="Pj6-Qj-ysE"/>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="BKK-wv-BY8" id="CWZ-8U-TrE"/>
+                        <outlet property="imageView" destination="8hA-Hr-Njs" id="yQZ-hR-2Mz"/>
                         <outlet property="saveButton" destination="YKQ-pG-2JP" id="TPW-Rc-UX0"/>
                         <outlet property="titleLabel" destination="RFG-OM-q9B" id="7db-Kf-5hh"/>
                         <outlet property="tripTextLabel" destination="5m8-sy-YSX" id="aXv-UL-DFx"/>
@@ -70,4 +85,10 @@
             <point key="canvasLocation" x="1055.072463768116" y="135.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="50" height="50"/>
+        <namedColor name="Tint">
+            <color red="1" green="0.24300000071525574" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

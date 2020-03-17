@@ -21,6 +21,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="dTe-Jp-Wwg">
+                                    <rect key="frame" x="0.0" y="188" width="414" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="0XW-2V-hKf" customClass="TripTableViewCell" customModule="Itinerary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="160"/>
@@ -33,6 +38,10 @@
                                                     <rect key="frame" x="8" y="0.0" width="398" height="149"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                     <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-Pk-x5F">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="149"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-f0-xVb">
                                                             <rect key="frame" x="12" y="31" width="378" height="77"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,6 +57,7 @@
                                         <connections>
                                             <outlet property="cardView" destination="FP0-3l-T5Q" id="WTY-Q3-AJ3"/>
                                             <outlet property="titleLabel" destination="eEC-f0-xVb" id="ylM-5U-LhM"/>
+                                            <outlet property="tripImageView" destination="cqk-Pk-x5F" id="lK1-Gg-qdz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -57,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <segue destination="iKz-q8-NOl" kind="presentation" id="LV1-w4-scC"/>
+                                    <segue destination="iKz-q8-NOl" kind="presentation" identifier="toAddTripSegue" id="LV1-w4-scC"/>
                                 </connections>
                             </button>
                         </subviews>
