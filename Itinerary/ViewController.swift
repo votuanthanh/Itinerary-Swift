@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet var helpScreen: UIVisualEffectView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: FloatingActionButton!
     
@@ -26,6 +28,11 @@ class ViewController: UIViewController {
         })
         
         view.backgroundColor = Theme.backgroundColor
+        
+        if UserDefaults.standard.bool(forKey: "isScreenHelpView") == false {
+            view.addSubview(helpScreen)
+            helpScreen.frame = view.frame
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,6 +44,17 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func closeHelpScreen(_ sender: AppUIButton) {
+        helpScreen.removeFromSuperview()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.helpScreen.alpha = 0
+        }, completion: { (success) in
+            self.helpScreen.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: "isScreenHelpView")
+        })
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -55,6 +73,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 tableView.reloadData()
                 actionPerformed(true)
             }))
+            
             
             self.present(alert, animated: true)
         }

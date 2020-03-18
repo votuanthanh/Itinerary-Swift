@@ -81,12 +81,64 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcA-ct-3bu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="hET-7V-DYD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="792"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Al3-LJ-oD0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="792"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="mcM-kb-RAG">
+                                <rect key="frame" x="18" y="40" width="378" height="532"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swip rows for more features!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4X-Lv-Gzk">
+                                        <rect key="frame" x="7" y="0.0" width="364" height="194"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="VvW-eI-k0p">
+                                        <rect key="frame" x="0.0" y="213" width="378" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="4zU-BY-xJ8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-0b-sDQ">
+                                        <rect key="frame" x="0.0" y="382" width="378" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="NTs-pM-gTs"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zu1-Fq-dqi" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="18" y="708" width="378" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JEZ-Nx-Ml2"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mcM-kb-RAG" secondAttribute="bottom" constant="220" id="7BC-Iy-yFu"/>
+                            <constraint firstItem="mcM-kb-RAG" firstAttribute="top" secondItem="Al3-LJ-oD0" secondAttribute="top" constant="40" id="FVd-Vz-eJc"/>
+                            <constraint firstItem="mcM-kb-RAG" firstAttribute="leading" secondItem="Al3-LJ-oD0" secondAttribute="leading" constant="18" id="Whz-F7-Uze"/>
+                            <constraint firstAttribute="trailing" secondItem="mcM-kb-RAG" secondAttribute="trailing" constant="18" id="hOn-gS-1yg"/>
+                            <constraint firstItem="zu1-Fq-dqi" firstAttribute="leading" secondItem="Al3-LJ-oD0" secondAttribute="leading" constant="18" id="mck-Wf-8V8"/>
+                            <constraint firstAttribute="bottom" secondItem="zu1-Fq-dqi" secondAttribute="bottom" constant="40" id="tfj-LR-z27"/>
+                            <constraint firstAttribute="trailing" secondItem="zu1-Fq-dqi" secondAttribute="trailing" constant="18" id="yVf-pM-TpB"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="1055.072463768116" y="135.9375"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera" width="50" height="50"/>
+        <image name="deleteSwipe" width="415" height="167"/>
+        <image name="editSwipe" width="412" height="170"/>
         <namedColor name="Tint">
             <color red="1" green="0.24300000071525574" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
