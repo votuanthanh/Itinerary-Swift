@@ -104,5 +104,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip = Data.tripModels[indexPath.row]
+        let storyBoard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        print(String(describing: ActivitiesViewController.self))
+        let vc = storyBoard.instantiateInitialViewController() as! ActivitiesViewController
+        vc.tripId = trip.id
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

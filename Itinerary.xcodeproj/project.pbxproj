@@ -10,6 +10,10 @@
 		EB03DE2B2421CD0900DBB3BE /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB03DE2A2421CD0900DBB3BE /* AddTripViewController.storyboard */; };
 		EB03DE2D2421FEB900DBB3BE /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB03DE2C2421FEB900DBB3BE /* ActivitiesViewController.storyboard */; };
 		EB03DE2F2421FED800DBB3BE /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03DE2E2421FED800DBB3BE /* ActivitiesViewController.swift */; };
+		EBF32B3C242858E0007B504F /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF32B3B242858E0007B504F /* ActivityModel.swift */; };
+		EBF32B3E24285924007B504F /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF32B3D24285924007B504F /* ActivityTypeEnum.swift */; };
+		EBF32B41242859F7007B504F /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF32B40242859F7007B504F /* DayModel.swift */; };
+		EBF32B4324285C4E007B504F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF32B4224285C4E007B504F /* MockData.swift */; };
 		EBF5F2A3241F2357001B474E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5F2A2241F2357001B474E /* AppDelegate.swift */; };
 		EBF5F2A5241F2357001B474E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5F2A4241F2357001B474E /* ViewController.swift */; };
 		EBF5F2A8241F2357001B474E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF5F2A6241F2357001B474E /* Main.storyboard */; };
@@ -27,12 +31,19 @@
 		EBF5F2D5241F7636001B474E /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5F2D4241F7636001B474E /* AddTripViewController.swift */; };
 		EBF5F2D7241F7D4B001B474E /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5F2D6241F7D4B001B474E /* PopupUIView.swift */; };
 		EBF5F2D9241F804E001B474E /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5F2D8241F804E001B474E /* AppUIButton.swift */; };
+		EBF6EE762428A453006B7ECB /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF6EE752428A453006B7ECB /* HeaderTableViewCell.swift */; };
+		EBF6EE782428AE87006B7ECB /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBF6EE772428AE87006B7ECB /* AvenirNextLTPro-Regular.otf */; };
+		EBF6EE7A2428AE9B006B7ECB /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBF6EE792428AE9B006B7ECB /* AvenirNextLTPro-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB03DE2A2421CD0900DBB3BE /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		EB03DE2C2421FEB900DBB3BE /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		EB03DE2E2421FED800DBB3BE /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		EBF32B3B242858E0007B504F /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		EBF32B3D24285924007B504F /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		EBF32B40242859F7007B504F /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		EBF32B4224285C4E007B504F /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		EBF5F29F241F2357001B474E /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF5F2A2241F2357001B474E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF5F2A4241F2357001B474E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +63,9 @@
 		EBF5F2D4241F7636001B474E /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		EBF5F2D6241F7D4B001B474E /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		EBF5F2D8241F804E001B474E /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
+		EBF6EE752428A453006B7ECB /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		EBF6EE772428AE87006B7ECB /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
+		EBF6EE792428AE9B006B7ECB /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EBF32B3A242858B7007B504F /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				EBF32B3B242858E0007B504F /* ActivityModel.swift */,
+				EBF32B3D24285924007B504F /* ActivityTypeEnum.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		EBF32B3F242859E7007B504F /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				EBF32B40242859F7007B504F /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
 		EBF5F296241F2357001B474E = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +133,11 @@
 		EBF5F2B4241F2472001B474E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EBF5F2B7241F2491001B474E /* Trip */,
+				EBF32B4224285C4E007B504F /* MockData.swift */,
 				EBF5F2B5241F2489001B474E /* Data.swift */,
+				EBF5F2B7241F2491001B474E /* Trip */,
+				EBF32B3F242859E7007B504F /* Day */,
+				EBF32B3A242858B7007B504F /* Activity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +168,7 @@
 				EBF5F2D4241F7636001B474E /* AddTripViewController.swift */,
 				EB03DE2C2421FEB900DBB3BE /* ActivitiesViewController.storyboard */,
 				EB03DE2E2421FED800DBB3BE /* ActivitiesViewController.swift */,
+				EBF6EE752428A453006B7ECB /* HeaderTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -150,6 +185,8 @@
 		EBF5F2C9241F56B9001B474E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EBF6EE772428AE87006B7ECB /* AvenirNextLTPro-Regular.otf */,
+				EBF6EE792428AE9B006B7ECB /* AvenirNextLTPro-Bold.otf */,
 				EBF5F2CC241F56E0001B474E /* FugazOne-Regular.ttf */,
 				EBF5F2CA241F56C5001B474E /* Theme.swift */,
 				EBF5F2CE241F585A001B474E /* Colors.xcassets */,
@@ -221,7 +258,9 @@
 				EB03DE2D2421FEB900DBB3BE /* ActivitiesViewController.storyboard in Resources */,
 				EBF5F2AA241F2359001B474E /* Assets.xcassets in Resources */,
 				EBF5F2CD241F56E0001B474E /* FugazOne-Regular.ttf in Resources */,
+				EBF6EE782428AE87006B7ECB /* AvenirNextLTPro-Regular.otf in Resources */,
 				EBF5F2A8241F2357001B474E /* Main.storyboard in Resources */,
+				EBF6EE7A2428AE9B006B7ECB /* AvenirNextLTPro-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,15 +274,20 @@
 				EBF5F2CB241F56C5001B474E /* Theme.swift in Sources */,
 				EBF5F2A5241F2357001B474E /* ViewController.swift in Sources */,
 				EBF5F2C5241F309F001B474E /* TripTableViewCell.swift in Sources */,
+				EBF32B4324285C4E007B504F /* MockData.swift in Sources */,
 				EBF5F2C8241F387F001B474E /* UIViewExtensions.swift in Sources */,
 				EB03DE2F2421FED800DBB3BE /* ActivitiesViewController.swift in Sources */,
 				EBF5F2BC241F24CF001B474E /* TripFunctions.swift in Sources */,
 				EBF5F2D7241F7D4B001B474E /* PopupUIView.swift in Sources */,
 				EBF5F2D9241F804E001B474E /* AppUIButton.swift in Sources */,
+				EBF32B41242859F7007B504F /* DayModel.swift in Sources */,
+				EBF6EE762428A453006B7ECB /* HeaderTableViewCell.swift in Sources */,
 				EBF5F2B6241F2489001B474E /* Data.swift in Sources */,
 				EBF5F2D5241F7636001B474E /* AddTripViewController.swift in Sources */,
+				EBF32B3E24285924007B504F /* ActivityTypeEnum.swift in Sources */,
 				EBF5F2D1241F6D04001B474E /* FloatingActionButton.swift in Sources */,
 				EBF5F2BA241F24C3001B474E /* TripModel.swift in Sources */,
+				EBF32B3C242858E0007B504F /* ActivityModel.swift in Sources */,
 				EBF5F2A3241F2357001B474E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
