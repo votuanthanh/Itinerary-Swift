@@ -32,7 +32,26 @@ class ActivitiesViewController: UIViewController {
             self.tableView.reloadData()
         }
 
-        sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: "header")?.contentView.bounds.height ?? 0
+        sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier)?.contentView.bounds.height ?? 0
+    }
+    
+    @IBAction func addAction(_ sender: FloatingActionButton) {
+        let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "Day", style: .default) { (action) in
+            print("Add new day")
+        }
+        
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { (action: UIAlertAction) in
+            print("Add new activity")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        alert.view.tintColor = Theme.tint
+        present(alert, animated: true)
     }
 }
 
@@ -42,7 +61,7 @@ extension ActivitiesViewController: UITableViewDataSource, UITableViewDelegate {
         guard let tripModel = self.tripModel else { return nil }
         let dayModel = tripModel.dayModels[section]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "header") as! HeaderTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier) as! HeaderTableViewCell
         cell.setup(model: dayModel)
         
         return cell.contentView
@@ -68,15 +87,12 @@ extension ActivitiesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let activityModel = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: ActivityTableViewCell.identifier) as! ActivityTableViewCell
         
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
+        cell.setup(model: activityModel!)
         
-        cell?.textLabel?.text = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row].title
-        
-        return cell!
+        return cell
         
     }
     

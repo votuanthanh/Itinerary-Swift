@@ -12,6 +12,7 @@ class Theme {
     static let mainFontName = "FugazOne-Regular"
     static let bodyFontName = "AvenirNextLTPro-Regular"
     static let bodyFontNameBold = "AvenirNextLTPro-Bold"
+    static let bodyFontNameDemiBold = "AvenirNextLTPro-Demi"
     static let accentColor = UIColor(named: "Accent")
     static let backgroundColor = UIColor(named: "Background")
     static let tint = UIColor(named: "Tint")
